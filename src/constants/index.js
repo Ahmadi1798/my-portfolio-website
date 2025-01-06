@@ -4,7 +4,7 @@ import project3 from '../assets/projects/project-3.webp';
 import project4 from '../assets/projects/project-4.webp';
 import project5 from '../assets/projects/project-5.webp';
 
-export const PROJECTS = [
+const PROJECTS = [
   {
     title: 'Jobify Website',
     image: project1,
@@ -53,3 +53,4 @@ export const PROJECTS = [
     liveLink: 'https://fylo-website-ten.vercel.app/',
   },
 ];
+export default PROJECTS;

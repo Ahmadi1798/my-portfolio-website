@@ -1,4 +1,4 @@
-import { PROJECTS } from '../constants';
+import PROJECTS from '../constants';
 import { motion } from 'motion/react';
 
 const Projects = () => {
