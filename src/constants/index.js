@@ -1,8 +1,8 @@
-import project1 from '../assets/projects/project-1.png';
-import project2 from '../assets/projects/project-2.webp';
-import project3 from '../assets/projects/project-3.webp';
-import project4 from '../assets/projects/project-4.webp';
-import project5 from '../assets/projects/project-5.webp';
+import project1 from '../assets/project-1.png';
+import project2 from '../assets/project-2.webp';
+import project3 from '../assets/project-3.webp';
+import project4 from '../assets/project-4.webp';
+import project5 from '../assets/project-5.webp';
 
 const PROJECTS = [
   {
