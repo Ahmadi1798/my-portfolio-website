@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: 'Inter', serif;
+}
+.ficon:hover {
+  filter: sepia(37%) hue-rotate(132deg) brightness(50%) contrast(100%)
+    grayscale(50%);
+}
