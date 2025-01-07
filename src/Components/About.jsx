@@ -3,11 +3,11 @@ import { motion } from 'motion/react';
 const About = () => {
   return (
     <section
-      className="h-screen flex justify-center items-center pt-20  lg:pt-0 mt-20 lg:m"
+      className="h-screen flex justify-center items-center pt-40 my-10  lg:pt-0 mt-20 "
       id="about"
     >
-      <div className="border-b border-neutral-900 pb-4">
-        <h2 className="text-4xl text-center my-20 tracking-wider">
+      <div className="border-b border-neutral-900 pb-4 mt-20 lg:my-0 ">
+        <h2 className="text-4xl text-center my-20 tracking-wider ">
           About <span className="text-neutral-600"> Me</span>
         </h2>
         <div className="flex flex-col lg:flex-row lg:space-x-20">
