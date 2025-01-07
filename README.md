@@ -55,12 +55,11 @@ react-portfolio/
 │   │   ├── about.jpg
 │   │   ├── myimage.png
 │   │   ├── mylogo.png
-│   │   └── Projects/
-│   │       ├── project-1.png
-│   │       ├── project-2.webp
-│   │       ├── project-3.webp
-│   │       ├── project-4.webp
-│   │       └── project-5.webp
+│   │   ├── project-1.png
+│   │   ├── project-2.webp
+│   │   ├── project-3.webp
+│   │   ├── project-4.webp
+│   │   └── project-5.webp
 │   ├── Components/
 │   │   ├── About.jsx
 │   │   ├── Contact.jsx
