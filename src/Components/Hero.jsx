@@ -7,10 +7,10 @@ const Hero = () => {
   });
   return (
     <section
-      className="h-screen flex justify-center items-center mt-10 lg:mt-0 "
+      className="h-screen flex justify-center items-center my-20 lg:my-0 "
       id="hero"
     >
-      <div className="border-b border-neutral-900 pb-4 lg:mb-20 w-full mt-20">
+      <div className="border-b border-neutral-900 pb-4 lg:mb-20 w-full">
         <div className="flex flex-wrap my-20">
           <div className="w-full lg:w-1/2">
             <div className="flex flex-col items-start">

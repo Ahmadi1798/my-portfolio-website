@@ -21,10 +21,7 @@ const Technologies = () => {
     },
   });
   return (
-    <section
-      className="border-b border-neutral-900 pb-24 pt-10 mt-20"
-      id="technologies"
-    >
+    <section className="border-b border-neutral-900 pb-24 " id="technologies">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
