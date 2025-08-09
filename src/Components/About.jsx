@@ -1,4 +1,4 @@
-import AboutMe from '../assets/about.jpg';
+import AboutMe from '../assets/about.webp';
 import { motion } from 'motion/react';
 
 const About = () => {

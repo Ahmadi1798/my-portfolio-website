@@ -1,4 +1,4 @@
-import ProfilePic from '../assets/rafi.jpg';
+import ProfilePic from '../assets/rafi.webp';
 import { motion } from 'motion/react';
 import { Typewriter } from 'react-simple-typewriter';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';

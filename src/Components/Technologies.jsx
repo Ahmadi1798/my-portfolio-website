@@ -7,6 +7,7 @@ import { FaGitAlt } from 'react-icons/fa';
 import { SiExpress } from 'react-icons/si';
 import { FaGithub } from 'react-icons/fa';
 import { SiTailwindcss } from 'react-icons/si';
+import { SiRedux } from 'react-icons/si';
 
 const techStack = [
   {
@@ -14,6 +15,12 @@ const techStack = [
     label: 'React.js',
     border: 'border-cyan-400/30',
     bg: 'bg-cyan-900/10',
+  },
+  {
+    icon: <SiRedux className="text-7xl text-purple-600" />,
+    label: 'Redux',
+    border: 'border-purple-600/30',
+    bg: 'bg-purple-900/10',
   },
   {
     icon: <SiExpress className="text-7xl bg-white text-black rounded" />,
