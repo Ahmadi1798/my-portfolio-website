@@ -22,50 +22,55 @@ const socials = [
 ];
 
 const container = (delay) => ({
-  hidden: { x: -100, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
+  hidden: { x: -40, opacity: 0 }, // smaller offset for mobile
+  visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay } },
 });
 
 const Hero = () => {
   return (
     <section
-      className="relative h-screen flex justify-center items-center my-20 lg:my-0 overflow-hidden"
       id="hero"
+      className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-visible bg-neutral-900"
     >
-      {/* Animated Gradient Background */}
-      <div className="absolute inset-0 -z-10 "></div>
-      <div className=" pb-4 lg:mb-20 w-full">
-        <div className="flex flex-wrap my-20">
-          <div className="w-full lg:w-1/2 flex flex-col items-start justify-center px-5 lg:px-0">
+      {/* Subtle animated glow background (kept behind with -z-10) */}
+      <div className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-br from-indigo-900/40 via-fuchsia-900/20 to-sky-900/40" />
+
+      <div className="w-full px-4 sm:px-6 lg:px-10 py-20 lg:py-0">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-6 items-center lg:items-stretch">
+          {/* Text Column */}
+          <div className="w-full lg:w-1/2 flex flex-col items-start justify-center">
             <motion.h1
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="text-[3.5rem] lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg"
+              className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg"
             >
               Rafiullah Ahmadi
             </motion.h1>
+
+            {/* Gradient typed subtitle */}
             <motion.span
-              variants={container(0.5)}
+              variants={container(0.15)}
               initial="hidden"
               animate="visible"
-              className="bg-gradient-to-r from-indigo-400 via-slate-400 to-pink-400 text-3xl lg:text-5xl text-transparent bg-clip-text font-semibold tracking-tight mt-2"
+              className="mt-3 inline-block bg-gradient-to-r from-indigo-300 via-slate-200 to-pink-300 bg-clip-text text-transparent text-2xl sm:text-3xl lg:text-5xl font-semibold tracking-tight"
             >
               <Typewriter
                 words={['Frontend Developer', 'MERN Stack Developer']}
                 loop={0}
                 cursor
                 cursorStyle="|"
-                typeSpeed={100}
+                typeSpeed={90}
                 deleteSpeed={60}
-                delaySpeed={1500}
+                delaySpeed={1400}
               />
             </motion.span>
+
             <motion.p
-              variants={container(1)}
+              variants={container(0.3)}
               initial="hidden"
               animate="visible"
-              className="max-w-lg tracking-wider text-base lg:text-lg leading-7 font-light py-6 text-neutral-200"
+              className="max-w-xl text-neutral-200/90 text-sm sm:text-base lg:text-lg leading-7 font-light py-6"
             >
               Innovative and detail-oriented MERN Stack Developer with 3+ years
               of experience delivering responsive and user-focused web
@@ -73,26 +78,26 @@ const Hero = () => {
               Tailwind CSS, and modern JavaScript, complemented by strong
               backend expertise in Node.js, Express.js, and MongoDB. Proficient
               in building and integrating RESTful APIs to create seamless
-              full-stack solutions. Adept at writing clean, maintainable code
-              and developing high-performing applications that combine modern
-              UI/UX design with robust backend functionality.
+              full-stack solutions.
             </motion.p>
+
             {/* CTA Button */}
             <motion.a
               href="#contact"
-              variants={container(1.3)}
+              variants={container(0.45)}
               initial="hidden"
               animate="visible"
-              className="inline-block mt-4 px-8 py-3 bg-indigo-600 hover:bg-pink-500 transition-colors duration-300 text-white font-semibold rounded-lg shadow-lg"
+              className="inline-block mt-2 px-6 py-3 sm:px-8 bg-indigo-600 hover:bg-pink-500 transition-colors duration-300 text-white font-semibold rounded-lg shadow-lg"
             >
               Contact Me
             </motion.a>
+
             {/* Social Icons */}
             <motion.div
-              variants={container(1.5)}
+              variants={container(0.6)}
               initial="hidden"
               animate="visible"
-              className="flex gap-6 mt-8"
+              className="flex gap-5 sm:gap-6 mt-6"
             >
               {socials.map((social) => (
                 <a
@@ -101,35 +106,35 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="text-2xl text-neutral-300 hover:text-pink-400 transition-colors duration-200"
+                  className="text-xl sm:text-2xl text-neutral-300 hover:text-pink-400 transition-colors duration-200"
                 >
                   {social.icon}
                 </a>
               ))}
             </motion.div>
           </div>
+
           {/* Profile Image */}
-          <div className="w-full lg:w-1/2 flex items-center justify-end mt-10 pr-20 lg:mt-0">
+          <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end mt-2 lg:mt-0">
             <motion.div
-              initial={{ x: 100, opacity: 0, rotate: 8 }}
+              initial={{ x: 40, opacity: 0, rotate: 3 }}
               animate={{ x: 0, opacity: 1, rotate: 0 }}
-              transition={{ duration: 1, delay: 1.2 }}
+              transition={{ duration: 0.9, delay: 0.4 }}
               className="relative rounded-2xl shadow-2xl group"
             >
-              <div className="absolute inset-0 rounded-2xl pointer-events-none bg-gradient-to-br from-indigo-400/30 via-white/10 to-pink-400/30 blur-xl opacity-60"></div>
+              <div className="absolute inset-0 rounded-2xl pointer-events-none bg-gradient-to-br from-indigo-400/30 via-white/10 to-pink-400/30 blur-xl opacity-60" />
               <img
                 src={ProfilePic}
                 alt="profile"
-                width="350"
-                className="rounded-2xl border-4 border-neutral-200 shadow-lg group-hover:scale-105 transition-transform duration-300"
+                width="320"
+                className="rounded-2xl border border-white/20 sm:border-2 shadow-lg group-hover:scale-105 transition-transform duration-300"
                 style={{
                   boxShadow:
                     '0 8px 32px 0 rgba(60,60,90,0.18), 0 0 40px 0 rgba(139,92,246,0.15), 0 0 80px 0 rgba(236,72,153,0.10)',
-                  background: 'rgba(255,255,255,0.05)',
+                  background: 'rgba(255,255,255,0.03)',
                 }}
               />
-              {/* Glass overlay for effect */}
-              <div className="absolute rounded-2xl top-0 left-0 right-0 bottom-0 bg-white/5 pointer-events-none"></div>
+              <div className="absolute inset-0 rounded-2xl bg-white/5 pointer-events-none" />
             </motion.div>
           </div>
         </div>

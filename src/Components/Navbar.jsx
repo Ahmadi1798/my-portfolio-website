@@ -10,13 +10,13 @@ const Navbar = () => {
 
   return (
     <header
-      className="fixed top-0 left-0 w-full z-30 transition-all duration-300"
+      className="fixed top-0 left-0 w-full z-30 transition-all duration-300 "
       id="navbar"
     >
       <div className="mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
         <nav
           aria-label="main navigation"
-          className="flex h-[4.5rem] items-stretch justify-between font-medium"
+          className="flex h-[4rem] items-stretch justify-between font-medium"
           role="navigation"
         >
           {/* Brand logo */}
@@ -29,7 +29,7 @@ const Navbar = () => {
           >
             <img
               src={logo}
-              className="w-14 drop-shadow-lg rounded-xl border-2 border-indigo-400 hover:border-pink-400 transition-all"
+              className=" w-12 drop-shadow-lg rounded-xl border-2 border-indigo-400 hover:border-pink-400 transition-all"
               alt="Logo"
             />
           </a>

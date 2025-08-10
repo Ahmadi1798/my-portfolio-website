@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 const About = () => {
   return (
     <section
-      className="relative flex justify-center items-center  pb-16 lg:pb-28"
+      className="relative flex justify-center items-center  py-16 lg:pb-28"
       id="about"
     >
       {/* Decorative blurred circle */}
